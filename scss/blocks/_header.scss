@@ -1,0 +1,152 @@
+.site-header {
+  position: fixed;
+  z-index: 55;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $bgc-color;
+}
+
+.site-header__container {
+  position: relative;
+  z-index: 5;
+  padding-top: 12px;
+  padding-bottom: 52px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* SITE-HEADER-TOP */
+.site-header__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.site-header__contact {
+  /*  width: 196px;  */ /* o'ng va chap tomondagi sheriklarining width tog'ri kela olishi margin-right dan foydalandim*/
+  margin-right: 49px; /*site-header dagi logotip markazda tira olishi uchun */
+}
+
+.site-header__contact,
+.working-time {
+  @include flex-center;
+  transition: opacity 0.4s ease;
+}
+
+/* PSEUDO-IMG */
+.pseudo-img::before {
+  @include header-top-pseudo-img;
+}
+
+.connection::before {
+  background-image: url("../img/phone.png");
+ 
+}
+
+.connection:hover {
+  opacity: 0.8;
+}
+.connection:active {
+  opacity: 0.6;
+}
+
+.working-time::before {
+  background-image: url("../img/clock.png"); /* img ni jpg qilib b-radius 50% qilsa bo'lardi lekin png bn hajmi 1 xil ekan */
+}
+
+.connection__text {
+  font-weight: 500;
+  color:$words-color;
+}
+
+.connection__phone {
+  display: block;
+  text-decoration: none;
+  font-weight: 300;
+  line-height: 16px;
+  color:$words-color;
+}
+
+.wrap-dentistry-link {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.wrap-dentistry-link:hover {
+  opacity: 0.8;
+}
+
+.wrap-dentistry-link:active {
+  opacity: 0.6;
+}
+
+.wrap-dentistry-link__logo {
+  display: block;
+  width: 103px;
+  height: 56px;
+}
+
+.connection__wrap,
+.working-time__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.working-time__open-now {
+  font-weight: 500;
+  color: #00b007;
+}
+
+.working-time__solidarity-work-time {
+  font-weight: 300;
+  color:$words-color;
+}
+
+
+
+
+@include breakpoint-down (1024px){
+ .site-header {
+  top: 34px;
+}
+
+.site-header__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+
+.site-header__top {
+  display:none;
+}
+
+}
+
+
+@include breakpoint-down (375px){
+  .site-header {
+   top: 34px;
+ }
+ 
+ .site-header__container {
+   position: absolute;
+   z-index: 0;
+   padding-top: 0;
+   padding-bottom: 0;
+   padding-left: 0;
+   padding-right: 0;
+ }
+ 
+ .site-header__top {
+   display:none;
+ }
+ 
+ }
+ 
+

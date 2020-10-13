@@ -1,0 +1,226 @@
+/*  SERVICES */
+.section-services {
+  background-color: var(--bgc-color);
+  padding-top: 77px;
+  padding-bottom: 65px;
+}
+
+.services__container::before {
+  width: 50px;
+  height: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--yellow-color);
+  content: "";
+}
+.section-services__wrapper {
+  width: 744px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  text-align: center;
+  background-image: url("../img/_D\ _P.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 260px;
+}
+
+.services__heading {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--text-color);
+}
+
+.services__text {
+  margin: 0;
+}
+
+/* 
+SERVICES-ul */
+
+.services__track {
+  position: relative;
+  z-index: 1;
+  width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services__control {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 49px;
+  padding: 0;
+  border: 2px solid #1d6ecb;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  background-size: auto 25px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: opacity 0.4s ease;
+}
+
+.services__control--prev {
+  right: 100%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/arrow-left.png");
+}
+
+.services__control--next {
+  z-index: 2;
+  right: 0;
+  left: 100%;
+  transform: translate(50%, -50%);
+  background-image: url("../img/arrow-right.png");
+}
+
+.services__control:hover {
+  opacity: 0.8;
+}
+
+.services__control:active {
+  opacity: 0.6;
+}
+
+.services__list {
+  display: flex;
+  width: 100%;
+  padding: 7px;
+  margin: 0;
+  /*   margin-left: auto;
+  margin-right: auto; */
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.services__item {
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding-top: 28px;
+  padding-bottom: 24px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-right: 35px;
+  border-radius: 5px;
+  background-color: var(--bgc-color);
+  box-shadow: 0 0 20px -4px rgba(128, 126, 126, 0.479);
+  text-align: center;
+}
+.service::before {
+  width: 77px;
+  height: 68px;
+  margin-bottom: 14px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  content: "";
+}
+
+.services__item--treatment::before {
+  background-image: url("../img/isqGaoU82.png");
+}
+
+.services__item--hygiene::before {
+  background-image: url("../img/FP42pk3g2.png");
+}
+.services__item--diagnostics::before {
+  background-image: url("../img/XhlP1WnU2.png");
+}
+.services__item--children’s::before {
+  background-image: url("../img/38XPQpqM2.png");
+}
+
+.service__name {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: normal;
+  line-height: 21px;
+  text-align: center;
+  color: var(--words-color);
+}
+.service__old-price::before {
+  width: 25px;
+  height: 2px;
+  display: inline-block;
+  margin-bottom: 13px;
+  background-color: #0a60c3;
+  content: "";
+}
+
+.service__old-price {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.service__new-price {
+  font-weight: 500;
+  line-height: 21px;
+  color: #0a60c3;
+}
+
+
+@include breakpoint-down(375px){
+  .section-services__wrapper {
+   width: 255px;
+    padding-top: 20px;
+    margin-right: auto;
+    margin-bottom: 6px;
+    text-align: center;
+    background-image: url("../img/_D\ _P.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 260px;
+  }
+  .services__heading {
+    margin: 0;
+    margin-bottom: 13px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: var(--text-color);
+  }
+
+  .services__control {
+    display: none;
+  }
+
+  .services__list {
+    padding: 0;
+    max-width: 360px;
+    overflow: hidden;
+  }
+  
+  .services__item {
+    max-width: 200px;
+  }
+  .service::before {
+    width: 69px;
+    height: 68px;
+    content: "";
+  }
+} 

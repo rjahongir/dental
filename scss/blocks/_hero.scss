@@ -1,0 +1,300 @@
+.hero {
+  /*   min-height: 800px; */
+  padding-top: 311px;
+  padding-bottom: 147px;
+  margin-bottom: 295px;
+  background-color: rgb(234, 238, 239);
+  background-image: url("../img/ispravlenie-prikusa.png");
+  background-repeat: no-repeat;
+  background-position: right calc(50% - 40px) top 10px;
+  background-size: 1977px 989px; 
+}
+
+.hero__container {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__inner {
+  max-width: 545px;
+  margin-bottom: 136px;
+}
+
+.hero__text {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: normal;
+  line-height: 21px;
+  color: $words-color;
+}
+
+.hero__heading {
+  margin: 0;
+  margin-bottom: 27px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: $words-color;
+}
+
+
+.hero__button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: $yellow-color;
+  transition: opacity 0.3s ease;
+}
+
+.hero__button + .hero__button {
+  margin-left: 9px;
+}
+
+.hero__button:hover {
+  opacity: 0.8;
+}
+.hero__button:active {
+  opacity: 0.6;
+}
+
+.pseudo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pseudo-btn::before {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px;
+  content: "";
+}
+.arrow-reight::before {
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/arrow.png");
+  background-size: 25px;
+}
+.arrow-left::before {
+  width: 42px;
+  height: 70px;
+  background-image: url("../img/arrowleft.png");
+  background-size: 15px;
+}
+
+/* HERO-APPOINTMENT */
+
+.hero__appointment {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  transform: translateY(88px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero__appointment-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.hero__appointment-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding-top: 39px;
+  padding-bottom: 31px;
+  padding-left: 36px;
+  padding-right: 36px;
+  border-radius: 5px;
+  background-color: $yellow-color;
+}
+
+.hero__appointment-item::before {
+  display: block;
+  width: 87px;
+  height: 87px;
+  margin-bottom: 18px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 87px 87px;
+  content: "";
+}
+
+.treatment::before {
+  background-image: url("../img/CRJvjai1\ 1.svg");
+  mix-blend-mode: multiply;
+}
+
+.prosthetics::before {
+  background-image: url("../img/prosthetics.svg");
+  mix-blend-mode: multiply;
+}
+
+.prosthetics {
+  background-color: #ffe040;
+  padding-left: 49px;
+  padding-right: 49px;
+}
+
+.hero__appointment-heading {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: normal;
+  line-height: 21px;
+  color: $words-color;
+  text-align: center;
+}
+.hero__appointment-text {
+  margin: 0;
+  color: $words-color;
+}
+
+/* HERO-FORM */
+
+.hero__form {
+  max-width: 579px;
+  padding-top: 25px;
+  padding-right: 33px;
+  padding-left: 33px;
+  padding-bottom: 18px;
+  background-color: #0055b8;
+  border-radius: 5px;
+}
+
+.appointment-form__heading {
+  margin: 0;
+  margin-bottom: 29px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: $bgc-color;
+}
+
+.appointment-form__input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 20px 14px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.appointment-form__input:placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hero__form .button--light {
+  padding: 17px 63px;
+  margin-bottom: 22px;
+  background-color: $yellow-color;
+  border-radius: 5px;
+}
+
+@include breakpoint-down(1024px){
+  .hero {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 10024px;
+    background-position: left calc(50% - 100px) top 10px;
+  }
+
+  .hero__form {
+    max-width: 485px;
+  }
+  .hero__form .button--light{
+    display: block;
+    width: 100%;
+    max-width: 206px;
+    padding: 17px 48px;
+    margin-bottom: 22px;
+    background-color: $yellow-color;
+    border-radius: 5px;
+  }
+  .hero__appointment-item {
+    max-width: 300px;
+  }
+}
+
+@include breakpoint-down(375px){
+  .hero {
+    position: static;
+    max-width: 375px;
+    background-color: $bgc-color;
+    background-image: url("../../img/mini-bgimg.jpg");
+    background-position: center top;
+    background-size: 375px 599px; 
+    padding-top: 621px;
+    padding-bottom: 0;
+    margin-bottom: 295px;
+  }
+  .hero__inner {
+    max-width: 375px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .hero__text {
+    margin-bottom: 21px;
+    color: $words-color;  
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
+  .hero__heading {
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .hero__container .button {
+    display: none;
+  }
+
+  .hero__conductor{
+    position: absolute;
+    z-index: 2;
+    bottom: 100%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  .hero__appointment {
+    transform: translateY(15px);
+    display: block;
+  }
+
+  .hero__form {
+    max-width: 375px;
+  }
+  .hero__form .button--light{
+    display: block;
+    width: 100%;
+    /* max-width: 375px; */
+    padding: 17px 63px;
+    margin-bottom: 22px;
+    background-color: $yellow-color;
+    border-radius: 5px;
+  }
+  .hero__appointment-list { 
+   display: none;
+  } 
+  
+}
+
+
+

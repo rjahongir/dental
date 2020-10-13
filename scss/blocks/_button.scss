@@ -1,0 +1,27 @@
+.button {
+  display: inline-block;
+  vertical-align: baseline;
+  min-width: 265px;
+  max-width: 100%;
+  padding: 25px 116px;
+  border: none;
+  border-radius: 5px;
+  background-color: $main-color;
+  color: $bgc-color;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  line-height: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+.button:active {
+  opacity: 0.6;
+}

@@ -1,0 +1,117 @@
+.reviews {
+  background-color: var(--bgc-color);
+  padding-top: 77px;
+  padding-bottom: 77px;
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews__container::before {
+  width: 50px;
+  height: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--yellow-color);
+  content: "";
+}
+
+.reviews__wrapper {
+  width: 483px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  text-align: center;
+  background-image: url("../img/_D _P.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 260px;
+}
+
+.reviews__heading {
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--text-color);
+}
+
+.reviews__text {
+  margin: 0;
+}
+
+/* 
+reviews-ul */
+.reviews__list {
+  display: flex;
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.reviews__item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-right: 39px;
+  background-color: var(--bgc-color);
+}
+
+.reviews-member::before {
+  width: 354px;
+  height: 240px;
+  margin-bottom: 31px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  content: "";
+}
+
+.reviews-member--ivan::before {
+  background-image: url("../img/ivanov.jpg");
+}
+
+.reviews-member--petrov::before {
+  background-image: url("../img/Mask Group.jpg");
+}
+
+.reviews-member__name {
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #000000;
+}
+
+.reviews-member__text {
+  color: var(--text-color);
+}
+
+.transparent {
+  margin-top: 45px;
+  padding: 25px 76px;
+  border: 2px solid #0055b8;
+  color: var(--text-color);
+  background-color: var(--bgc-color);
+  transition: background-color 0.4s ease, color 0.4s ease, opacity 0.4s ease;
+}
+
+.transparent:hover {
+  border: 2px solid #0055b8;
+  color: var(--bgc-color);
+  background-color: #0055b8;
+}
+
+.transparent:active {
+  opacity: 0.6;
+}
